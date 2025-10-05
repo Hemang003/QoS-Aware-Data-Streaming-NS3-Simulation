@@ -1,0 +1,18 @@
+# Ignore build artifacts and binaries
+*.o
+*.so
+*.a
+build/
+scratch/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# macOS / Editor junk
+.DS_Store
+.vscode/
+.idea/
+
+# Ignore local results
+results/
