@@ -52,21 +52,21 @@ QoS-LTE-Simulation/
  Step 1: Copy the simulation file
 Copy qos_lte_streaming.cc to your NS-3 installation folder under scratch/:
 
-bash
-Copy code
+
 cp src/qos_lte_streaming.cc ~/Downloads/ns-allinone-3.41/ns-3.41/scratch/
+
 ️ Step 2: Build NS-3
-bash
-Copy code
+
+
 cd ~/Downloads/ns-allinone-3.41/ns-3.41
-./waf build
+./waf build 
+
 ️ Step 3: Run the simulation with different UE speeds
 You can control the mobile user’s speed (in meters per second) using the --ueSpeed argument.
 
 Examples:
 
-bash
-Copy code
+
 ./waf --run "scratch/qos_lte_streaming --ueSpeed=1.0"
 ./waf --run "scratch/qos_lte_streaming --ueSpeed=3.0"
 ./waf --run "scratch/qos_lte_streaming --ueSpeed=5.0"
@@ -75,14 +75,12 @@ qos-results.xml
 
 To save multiple runs, rename them:
 
-bash
-Copy code
+
 mv qos-results.xml results/qos-results-1.xml
  Step 4: Analyze QoS Results (Python)
 After each simulation, run the analysis script:
 
-bash
-Copy code
+
 cd scripts
 python3 analyze_qos.py ../results/qos-results-1.xml
 The script:
@@ -125,7 +123,7 @@ Compare QoS trends to understand how mobility affects streaming quality.
 You can visualize your results using matplotlib or Excel:
 
 python
-Copy code
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -156,7 +154,7 @@ Extend simulation time to observe long-term performance trends
 Sample terminal output from FlowMonitor:
 
 yaml
-Copy code
+
 Flow 1 (1.0.0.1 -> 7.0.0.2)
   Tx Packets: 500
   Rx Packets: 280
